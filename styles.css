@@ -1,0 +1,173 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black; /* Черный фон */
+  color: white; /* Белый текст */
+}
+
+header {
+  background-color: #000000;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner {
+  background-image: url('banner-image.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  transition: color 0.3s ease; /* Анимация при изменении цвета */
+}
+
+.banner h2:hover {
+  color: #00b3ff; /* Цвет заголовка при наведении */
+}
+
+/* Добавляем анимацию мигания цветом для кнопки */
+@keyframes blinkColor {
+  0% {
+    background-color: #00b3ff; /* Начальный цвет кнопки */
+  }
+  50% {
+    background-color: #008adb /* Цвет, в который будет мигать кнопка */
+  }
+  100% {
+    background-color: #00b3ff; /* Возвращаем начальный цвет кнопки */
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00b3ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #009adb;
+}
+
+/* Применяем анимацию мигания цветом к кнопке */
+.button.blinking {
+  animation: blinkColor 2s infinite;
+}
+
+
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block; /* Добавляем inline-block для сохранения текущего положения текста */
+  position: relative;
+  margin-right: 20px; /* Добавляем небольшой отступ между пунктами навигации */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Убираем отступ у последнего пункта навигации */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #00b3ff;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+/* Стили для текста в шапке сайта */
+.logo {
+  color: #fff; /* Исходный цвет текста */
+  transition: color 0.3s; /* Анимация изменения цвета при наведении */
+}
+
+.logo:hover {
+  color: #00b3ff; /* Новый цвет текста при наведении */
+}
+
+
+        /* Стили для ссылок */
+        .ass {
+            color: #f7f7f7; /* Цвет текста ссылки */
+            text-decoration: none; /* Убираем подчеркивание ссылок */
+        }
+
+        /* При наведении курсора меняем цвет */
+        .ass:hover {
+            color: white; /* Цвет текста при наведении курсора */
+            background-color: #00b3ff; /* Цвет фона при наведении курсора */
+            transition: color 0.3s, background-color 0.3s; /* Плавное изменение цвета */
+        }
+		
+		.rules {
+  padding: 20px;
+  background-color: #000000;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
